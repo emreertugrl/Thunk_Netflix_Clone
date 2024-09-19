@@ -1,8 +1,8 @@
-# Movie Detail Web Application 🎬
+# Thunk Netflix Clone 🎬
 
 ## Project Description
 
-This project is a movie detail web application where users can explore detailed information about movies, including the cast, trailers, production details, and much more. The project leverages **TMDB API** to fetch movie data and display it in an intuitive and visually appealing interface.
+This project is a thunk netflix clone where users can explore detailed information about movies, including the cast, trailers, production details, and much more. The project leverages **TMDB API** to fetch movie data and display it in an intuitive and visually appealing interface.
 
 ## Features
 
@@ -58,7 +58,7 @@ To run this project locally:
 
 ## Live Demo
 
-<a href="https://menuapplication.netlify.app/">Netlify Project View</a>
+<a href="https://rtkmovieapp.netlify.app/">Netlify Project View</a>
 
 ## APIs Used
 
