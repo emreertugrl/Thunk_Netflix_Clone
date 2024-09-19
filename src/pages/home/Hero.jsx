@@ -3,6 +3,8 @@ import api from "./../../utils/api/index";
 import Error from "./../../components/error/index";
 import Loader from "./../../components/loader/index";
 import { baseImgUrl } from "./../../utils/constants";
+import Button from "../detail/Button";
+import { Link } from "react-router-dom";
 const Hero = () => {
   const [movie, setMovie] = useState(null);
   const [error, setError] = useState(null);
@@ -24,7 +26,7 @@ const Hero = () => {
   if (!movie) return <Loader />;
 
   return (
-    <div className="grid md:grid-cols-2 md:max-h-[400px] mb-10 gap-5">
+    <div className="grid grid-cols-1 md:grid-cols-2 md:max-h-[400px] mb-10 gap-5">
       <div className="flex flex-col gap-6 items-center justify-center">
         <h1 className="text-3xl font-bold">{movie.title}</h1>
         <p className="text-start text-gray-300">{movie.overview}</p>
@@ -35,15 +37,16 @@ const Hero = () => {
           </span>
         </p>
         <div className="flex gap-5">
-          <button className="p-2 bg-red-600 rounded transition hover:bg-red-700">
+          <Link
+            to={`/movie/${movie.id}`}
+            className="p-2 bg-red-600 rounded transition hover:bg-red-700"
+          >
             Filmi İzle
-          </button>
-          <button className="p-2 bg-blue-600 rounded transition hover:bg-blue-700">
-            Listeye Ekle
-          </button>
+          </Link>
+          <Button movie={movie} />
         </div>
       </div>
-      <div>
+      <div className="flex justify-center">
         <img
           src={baseImgUrl + movie.backdrop_path}
           alt="movie"

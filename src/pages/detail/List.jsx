@@ -1,5 +1,4 @@
 const List = ({ title, arr }) => {
-  console.log(arr);
   return (
     <div className="mb-6">
       <h2 className="text-xl font-semibold mb-2">{title}</h2>

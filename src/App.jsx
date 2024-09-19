@@ -4,13 +4,14 @@ import Home from "./pages/home";
 import Favourites from "./pages/favourites";
 import Header from "./components/header";
 import { useDispatch } from "react-redux";
-import { getGenres } from "./redux/actions";
+import { getFavorite, getGenres } from "./redux/actions";
 import Detail from "./pages/detail";
 
 const App = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getGenres());
+    dispatch(getFavorite());
   }, []);
   return (
     <div>
@@ -20,7 +21,7 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/movie/:id" element={<Detail />} />
-            <Route path="/favourites" element={<Favourites />} />
+            <Route path="/watch-list" element={<Favourites />} />
           </Routes>
         </div>
       </BrowserRouter>
